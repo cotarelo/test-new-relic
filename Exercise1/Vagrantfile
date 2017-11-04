@@ -1,3 +1,5 @@
+# Ubuntu Linux 16.04 vagrant box provisioned with newrelic-infra software
+
 $script = <<SCRIPT
 echo "license_key: 4c38d64f398e1c0c2f0e94fb4075234121e87dac" | sudo tee -a /etc/newrelic-infra.yml
 /usr/bin/curl https://download.newrelic.com/infrastructure_agent/gpg/newrelic-infra.gpg | sudo apt-key add -
@@ -5,6 +7,10 @@ printf "deb [arch=amd64] http://download.newrelic.com/infrastructure_agent/linux
 sudo apt-get update
 sudo apt-get install newrelic-infra -y
 SCRIPT
+
+# Used shell provision to install the software
+# Documentation for installation in docs.newrelic.com
+# Hardcoded license_key for the newrelic account acme_128
 
 Vagrant.configure("2") do |config|
   config.vm.box = "ubuntu/xenial64"
@@ -15,3 +21,6 @@ Vagrant.configure("2") do |config|
      vb.customize ["modifyvm", :id, "--natdnsproxy1", "on"]
   end
 end
+
+# Used an already existing Vagrant box from HashiCorp
+# Configured the virtual machine with DHCP doing nat to the host.
