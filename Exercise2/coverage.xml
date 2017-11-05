@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-03.dtd">
+<coverage line-rate="0" branch-rate="0" version="" timestamp="1509904093898">
+	<packages>
+		<package name="folderSize/src" line-rate="0" branch-rate="0" complexity="0">
+			<classes>
+				<class name="-" filename="/home/ubuntu/go/src/folderSize/src/folderSize.go" line-rate="0" branch-rate="0" complexity="0">
+					<methods>
+						<method name="populateInventory" signature="" line-rate="0" branch-rate="0">
+							<lines>
+								<line number="26" hits="0"></line>
+							</lines>
+						</method>
+						<method name="populateMetrics" signature="" line-rate="0" branch-rate="0">
+							<lines>
+								<line number="30" hits="0"></line>
+								<line number="31" hits="0"></line>
+								<line number="32" hits="0"></line>
+								<line number="33" hits="0"></line>
+								<line number="35" hits="0"></line>
+								<line number="36" hits="0"></line>
+								<line number="37" hits="0"></line>
+								<line number="39" hits="0"></line>
+								<line number="40" hits="0"></line>
+								<line number="41" hits="0"></line>
+								<line number="43" hits="0"></line>
+								<line number="45" hits="0"></line>
+							</lines>
+						</method>
+						<method name="main" signature="" line-rate="0" branch-rate="0">
+							<lines>
+								<line number="49" hits="0"></line>
+								<line number="50" hits="0"></line>
+								<line number="52" hits="0"></line>
+								<line number="53" hits="0"></line>
+								<line number="56" hits="0"></line>
+								<line number="57" hits="0"></line>
+								<line number="58" hits="0"></line>
+								<line number="60" hits="0"></line>
+							</lines>
+						</method>
+						<method name="fatalIfErr" signature="" line-rate="0" branch-rate="0">
+							<lines>
+								<line number="64" hits="0"></line>
+								<line number="65" hits="0"></line>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="26" hits="0"></line>
+						<line number="30" hits="0"></line>
+						<line number="31" hits="0"></line>
+						<line number="32" hits="0"></line>
+						<line number="33" hits="0"></line>
+						<line number="35" hits="0"></line>
+						<line number="36" hits="0"></line>
+						<line number="37" hits="0"></line>
+						<line number="39" hits="0"></line>
+						<line number="40" hits="0"></line>
+						<line number="41" hits="0"></line>
+						<line number="43" hits="0"></line>
+						<line number="45" hits="0"></line>
+						<line number="49" hits="0"></line>
+						<line number="50" hits="0"></line>
+						<line number="52" hits="0"></line>
+						<line number="53" hits="0"></line>
+						<line number="56" hits="0"></line>
+						<line number="57" hits="0"></line>
+						<line number="58" hits="0"></line>
+						<line number="60" hits="0"></line>
+						<line number="64" hits="0"></line>
+						<line number="65" hits="0"></line>
+					</lines>
+				</class>
+			</classes>
+		</package>
+	</packages>
+</coverage>
