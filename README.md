@@ -46,3 +46,7 @@ And then you can run the tool from the package directory. I used the same packag
 The binary package can be found in the Exercise3 directory
 
 ### Exercise 4
+
+To deploy the file into the virtual machine I used the file provisioner, but for deploying it was better using the Ansible local provisioner for Vagrant letting Ansible doing the work of installing the package and refreshing the service.
+
+Since I had chosen Ubuntu 16.04 and the the Ansible local provisioner relies on python2 I needed to add python-minimal before using ansible. With Ubuntu 14.04 this installation would not be needed since python2 is the default

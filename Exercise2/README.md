@@ -1,31 +1,17 @@
 # New Relic Infrastructure Integration for folderSize
 
-Reports status and metrics for folderSize service
+Reports metrics for the size of a folder
 
-## Requirements
-
-Document if the Integration has some special requirement. Ex: Installing an
-extra module, permissions to execute a binary, etc.
-
-## Configuration
-
-Document if the Integration needs some configuration for running. Ex: Set
-up permissions, add a special user, etc.
 
 ## Installation
 
-Describe the installation process for the Integration.
+Install as a any other integration, copying the configuration files and restarting the newrelic-infra agent. On the Exercise4 a deb package is created for this purpose
 
 ## Usage
 
-Document mandatory and optional arguments for running the Integration, and how to execute it.
+Currently it calculates only the size of the /home folder for simplicity. It can be adapted to use a different folder as a parameter.
 
 ## Compatibility
 
-* Supported OS: 
-* folderSize versions:
-* Edition: 
-
-## Integration Development usage
-
-Describe the development workflow for this Integration.
+* Supported OS: Ubuntu 16.04
+* folderSize versions: 0.1.0
