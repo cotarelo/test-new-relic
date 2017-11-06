@@ -3,8 +3,7 @@
   sudo: true
   tasks:
     - name: Install a .deb package
-      apt:
-        deb: /tmp/acme-128_1.0.0-1_amd64.deb
+      apt: deb="/tmp/acme-128_1.0.0-1_amd64.deb"
       notify:
       - restart newrelic-infra
   handlers:
