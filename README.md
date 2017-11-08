@@ -81,10 +81,14 @@ CONTAINER ID        IMAGE               COMMAND                   CREATED       
 
 #### Docker daemon
 
-I set up a Docker Swarm cluster in the past. With this solution you could run docker images remotely and with high availability. By setting up the environment variable docker host pointing to the remote host.
+Setting the environment variable DOCKER_HOST makes that your local docker client connects to the remote docker host and each command typed locally will be triggered in the remote machine.
 
 ```export DOCKER_HOST="tcp://1.2.3.4:2375"```
 
-The local containers will be ran on any of the docker Swarm Cluster nodes. In my opinion that would be a long term solution which would ease the remote deployment among other benefits.
+However there is an issue with the image, if the image we built is not in the remote host the container would not be launched, therefore we have 2 options.
 
-In the other hand if we do not have swarm, the way would be to push the image to a Docker registry, then pull the image down in the remote machine. I also found a post where it is explained how to expose the docker daemon to the hosts on the network, setting up certificates and securing http communications. Seems also a way to go, however I did not try it personally https://oroboro.com/docker-remote-deployment/
+1) Cloning the repository on the remote host and building the image on the remote host too
+2) Triggering a local command on the remote machine "docker build https://raw.githubusercontent.com/cotarelo/test-new-relic/master/Exercise5/Dockerfile". We would need to have having the debian package for the custom integration in a debian repository too.
+3) Setting up a docker registry and pushing the image there, so the image could be pulled from the regitry using FROM: on the Dockerfile
+
+I set up a Docker Swarm cluster and a docker registry in the past. With this solution you could run docker images remotely and with high availability. In my opinion that would be a long term solution which would ease the remote deployment among other benefits. For more advanced solutions there is Kubernetes, Integrated containers in Amazon EC2 or Google Cloud, etc...
