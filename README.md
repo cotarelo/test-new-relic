@@ -21,7 +21,7 @@ After installing the sofware it can be seen how the data is sent to New Relic un
 
 ### Exercise 2
 
-I have followed the redis tutorial of the custom for Redis and adapted it to calculate the size of a folder. The code and readme is on the Exercise2 folder.
+I started by coding a Python script to do that part, then reading the documentation I went trough the basics of Go and did a similar program. After I have followed the  tutorial of the custom integration for Redis it was easier to modify that Go custom integration calculate the size of a folder using the linux Disk Usage command which will calculate the size of the folder recursively. The code and readme is on the Exercise2 folder. For simplicity and time I chosen to list the size of the home folder, but it could be passed as a parameter like I did in the initial go script https://github.com/cotarelo/test-new-relic/commit/f6e2970cc1c667d2e5daa48fc1812dfb3f2a9a9f#diff-ee712df3dc1257dfc9c37c9a17b699dcR26
 
 ### Exercise 3
 
@@ -43,7 +43,7 @@ And then you can run the tool from the package directory. I used the same packag
 
 ```$ fpm -s dir -t deb --name acme-128 --version 1.0.0 --iteration 1 --description "Folder Size Integration for New Relic Infra" .```
 
-The binary package can be found in the Exercise3 directory
+The binary package can be found in the Exercise3 directory together with a short Readme
 
 ### Exercise 4
 
@@ -81,10 +81,10 @@ CONTAINER ID        IMAGE               COMMAND                   CREATED       
 
 #### Docker daemon
 
-
-
-I set up a Docker Swarm cluster in the past. With this solution you could run docker images remotely by setting up the environment variable docker host pointing to the remote host.
+I set up a Docker Swarm cluster in the past. With this solution you could run docker images remotely and with high availability. By setting up the environment variable docker host pointing to the remote host.
 
 ```export DOCKER_HOST="tcp://1.2.3.4:2375"```
 
-That would be a good way to go for a long term solution.
+The local containers will be ran on any of the docker Swarm Cluster nodes. In my opinion that would be a long term solution which would ease the remote deployment among other benefits.
+
+In the other hand if we do not have swarm, the way would be to push the image to a Docker registry, then pull the image down in the remote machine. I also found a post where it is explained how to expose the docker daemon to the hosts on the network, setting up certificates and securing http communications. Seems also a way to go, however I did not try it personally https://oroboro.com/docker-remote-deployment/
