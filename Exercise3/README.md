@@ -1,8 +1,11 @@
 # Custom integration folderSize Debian Package
-##Calculates the size of a directory for newrelic-infra client and sends to New Relic Site
-###Installation
+
+## Calculates the size of a directory for newrelic-infra client and sends to New Relic Site
+### Installation
 Run with super user privileges
-``` dpkg -i [package-name]```
+```
+dpkg -i [package-name]
+```
 ###Requirements
 Debian based systems on i386 or amd_64 architectures
 ###Metadata
