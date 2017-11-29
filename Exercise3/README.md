@@ -6,9 +6,9 @@ Run with super user privileges
 ```
 dpkg -i [package-name]
 ```
-###Requirements
+### Requirements
 Debian based systems on i386 or amd_64 architectures
-###Metadata
+### Metadata
 ```
  new debian package, version 2.0.
  size 1179438 bytes: control archive=594 bytes.
